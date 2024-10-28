@@ -1,0 +1,64 @@
+units:
+  padding: 3
+  kx: u
+  ky: u
+  px: kx + padding
+  py: ky + padding
+  mcu_x: 18
+  fillet: 2
+points:
+  zones:
+    matrix:
+      columns:
+        col1:
+        col2:
+        col3:
+          rows.func.skip: true
+      rows:
+        func:
+        bottom:
+        home:
+        top:
+    thumbfan:
+      anchor:
+        ref: matrix_col3_func
+        shift: [2, -2.75]
+      columns:
+        near:
+          key.splay: -15
+          rows.top.skip: true
+        mid:
+          key:
+            splay: -5
+            stagger: -1
+            spread: kx + 0.5
+        far:
+          key:
+            splay: -5
+            stagger: -1
+            spread: kx + 0.5
+      rows:
+        bottom:
+        top:
+outlines:
+  keys:
+    - what: rectangle
+      where: true
+      size: [kx-0.5,ky-0.5]
+      bound: false
+  pcb:
+    - what: polygon
+      operation: stack
+      points:
+        - ref: matrix_col1_top
+          shift: [-0.5px, 0.5py]
+        - ref: matrix_col3_top
+          shift: [0.5px + mcu_x, 0.5py]
+        - ref: thumbfan_far_top
+          shift: [0.5px, 0.5py]
+        - ref: thumbfan_far_bottom
+          shift: [0.5px, -0.5py]
+        - ref: matrix_col1_func
+          shift: [-0.5px, -0.5py]
+      fillet: fillet
+  quick_view: [pcb, -keys]
