@@ -1,14 +1,18 @@
 units:
-  padding: 3
+  padding: 4
   kx: u
   ky: u
   px: kx + padding
   py: ky + padding
   mcu_x: 18
+  mcu_y: 23
   fillet: 2
 points:
   zones:
     matrix:
+       # Fix placement on KiCAD sheet.
+      anchor:
+        shift: [100, -150]
       columns:
         col1:
         col2:
@@ -46,14 +50,16 @@ outlines:
       where: true
       size: [kx-0.5,ky-0.5]
       bound: false
-  pcb:
+  plate:
     - what: polygon
       operation: stack
       points:
         - ref: matrix_col1_top
           shift: [-0.5px, 0.5py]
         - ref: matrix_col3_top
-          shift: [0.5px + mcu_x, 0.5py]
+          shift: [0.5px + mcu_x + 2, 0.5py]
+        - ref: matrix_col3_top
+          shift: [0.5px + mcu_x + 2, -0.5py]
         - ref: thumbfan_far_top
           shift: [0.5px, 0.5py]
         - ref: thumbfan_far_bottom
@@ -61,4 +67,46 @@ outlines:
         - ref: matrix_col1_func
           shift: [-0.5px, -0.5py]
       fillet: fillet
-  quick_view: [pcb, -keys]
+    - what: circle
+      where:
+        ref: matrix_col1_func
+        shift: [-6, -216]
+      radius: 204
+      operation: subtract
+    - what: circle
+      where:
+        ref: matrix_col3_top
+        shift: [71.5, 0.5py - mcu_y + 0.5]
+      radius: 40
+      operation: subtract
+  quick_view: [plate, -keys]
+pcbs:
+  keydoku:
+    template: kicad8
+    outlines:
+      main:
+        outline: plate
+      keycaps:
+        outline: keys
+        layer: Eco1.User
+    footprints:
+      promicro:
+        what: achamian/rp_2040_zero
+        where:
+          ref: matrix_col3_top
+          shift: [0.5px + 0.5mcu_x, 0.5py - 0.5mcu_y - 2]
+        params:
+          orientation: 'up'
+      mx_switch:
+        what: ceoloide/switch_mx
+        where: true
+        params:
+          hotswap: true
+          solder: false
+          from: "{{column_net}}"
+          to: "GND"
+      # led:
+      #   what: ceoloide/led_sk6812mini-e
+      #   where: true
+      #   params:
+      #     side: F
