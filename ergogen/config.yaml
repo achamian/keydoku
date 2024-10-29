@@ -7,17 +7,58 @@ units:
   mcu_x: 18
   mcu_y: 23
   fillet: 2
+  led_pos_x: 0
+  led_pos_y: -4.7
 points:
   zones:
     matrix:
        # Fix placement on KiCAD sheet.
       anchor:
         shift: [100, -150]
+      key:
+        tags: [mx]
       columns:
         col1:
+          rows:
+            top:
+              led_prev: LED_3
+              led_next: LED_4
+            home:
+              led_prev: LED_4
+              led_next: LED_5
+            bottom:
+              led_prev: LED_9
+              led_next: LED_10
+            func:
+              led_prev: LED_10
+              led_next: LED_11
         col2:
+          rows:
+            top:
+              led_prev: LED_2
+              led_next: LED_3
+            home:
+              led_prev: LED_5
+              led_next: LED_6
+            bottom:
+              led_prev: LED_8
+              led_next: LED_9
+            func:
+              led_prev: LED_11
+              led_next: LED_12
         col3:
-          rows.func.skip: true
+          rows:
+            top:
+              led_prev: LED_1
+              led_next: LED_2
+              net: P2
+            home:
+              led_prev: LED_6
+              led_next: LED_7
+            bottom:
+              led_prev: LED_7
+              led_next: LED_8
+            func.skip: true
       rows:
         func:
         bottom:
@@ -30,20 +71,44 @@ points:
       columns:
         near:
           key.splay: -15
-          rows.top.skip: true
+          rows:
+            thump_t.skip: true
+            thumb_b:
+              tags: [choc]
+              led_prev: LED_12
+              led_next: LED_13
         mid:
           key:
             splay: -5
             stagger: -1
             spread: kx + 0.5
+          rows:
+            thump_t:
+              tags: [mx]
+              led_prev: LED_16
+              led_next: LED_17
+            thumb_b:
+              tags: [choc]
+              led_prev: LED_13
+              led_next: LED_14
         far:
           key:
             splay: -5
             stagger: -1
             spread: kx + 0.5
+          rows:
+            thump_t:
+              tags: [mx]
+              led_prev: LED_15
+              led_next: LED_16
+            thumb_b:
+              tags: [choc]
+              led_prev: LED_14
+              led_next: LED_15
       rows:
-        bottom:
-        top:
+        thumb_b:
+          key.tags: [mx]
+        thump_t:
 outlines:
   keys:
     - what: rectangle
@@ -60,9 +125,9 @@ outlines:
           shift: [0.5px + mcu_x + 2, 0.5py]
         - ref: matrix_col3_top
           shift: [0.5px + mcu_x + 2, -0.5py]
-        - ref: thumbfan_far_top
+        - ref: thumbfan_far_thump_t
           shift: [0.5px, 0.5py]
-        - ref: thumbfan_far_bottom
+        - ref: thumbfan_far_thumb_b
           shift: [0.5px, -0.5py]
         - ref: matrix_col1_func
           shift: [-0.5px, -0.5py]
@@ -90,21 +155,55 @@ pcbs:
         outline: keys
         layer: Eco1.User
     footprints:
-      promicro:
+      mcu:
         what: achamian/rp_2040_zero
         where:
           ref: matrix_col3_top
           shift: [0.5px + 0.5mcu_x, 0.5py - 0.5mcu_y - 2]
         params:
           orientation: 'up'
+          P29: LED_1
       mx_switch:
         what: ceoloide/switch_mx
-        where: true
+        where: /mx/
         params:
           hotswap: true
           solder: false
-          from: "{{column_net}}"
-          to: "GND"
+          from: "GND"
+          to: "{{net}}"
+      choc_swich:
+        what: ceoloide/switch_choc_v1_v2
+        where: /choc/
+        params:
+          hotswap: true
+          include_plated_holes: false
+          choc_v2_support: true
+          from: "GND"
+          to: "{{net}}"
+      per_key_led_rotated:
+        what: ceoloide/led_sk6812mini-e
+        where: /(top|bottom|thump_t)/
+        params:
+          side: B
+          P1: VCC5V
+          P2: "{{led_next}}" # DOUT
+          P3: GND
+          P4: "{{led_prev}}" # DIN
+        adjust:
+          shift: [led_pos_x, led_pos_y]
+          rotate: 180
+      per_key_led:
+        what: ceoloide/led_sk6812mini-e
+        where: /(home|func|thumb_b)/
+        params:
+          side: B
+          P1: VCC5V
+          P2: "{{led_next}}" # DOUT
+          P3: GND
+          P4: "{{led_prev}}" # DIN
+        adjust:
+          shift: [led_pos_x, led_pos_y]
+
       # led:
       #   what: ceoloide/led_sk6812mini-e
       #   where: true
