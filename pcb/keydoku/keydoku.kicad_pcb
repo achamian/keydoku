@@ -217,7 +217,7 @@
 			(roundrect_rratio 0)
 			(chamfer_ratio 0.2)
 			(chamfer bottom_left)
-      (net 0 ""))
+      (net 13 "P9"))
     
 		(fp_poly
 			(pts
@@ -260,7 +260,7 @@
 			(roundrect_rratio 0)
 			(chamfer_ratio 0.2)
 			(chamfer bottom_left)
-      (net 0 ""))
+      (net 16 "P12"))
     
 		(fp_poly
 			(pts
@@ -303,7 +303,7 @@
 			(roundrect_rratio 0)
 			(chamfer_ratio 0.2)
 			(chamfer bottom_left)
-      (net 0 ""))
+      (net 19 "P15"))
     
 		(fp_poly
 			(pts
@@ -346,7 +346,7 @@
 			(roundrect_rratio 0)
 			(chamfer_ratio 0.2)
 			(chamfer bottom_left)
-      (net 0 ""))
+      (net 22 "P28"))
     
 		(fp_poly
 			(pts
@@ -389,7 +389,7 @@
 			(roundrect_rratio 0)
 			(chamfer_ratio 0.2)
 			(chamfer bottom_left)
-      (net 0 ""))
+      (net 12 "P8"))
     
 		(fp_poly
 			(pts
@@ -432,7 +432,7 @@
 			(roundrect_rratio 0)
 			(chamfer_ratio 0.2)
 			(chamfer bottom_left)
-      (net 0 ""))
+      (net 15 "P11"))
     
 		(fp_poly
 			(pts
@@ -475,7 +475,7 @@
 			(roundrect_rratio 0)
 			(chamfer_ratio 0.2)
 			(chamfer bottom_left)
-      (net 0 ""))
+      (net 18 "P14"))
     
 		(fp_poly
 			(pts
@@ -518,7 +518,7 @@
 			(roundrect_rratio 0)
 			(chamfer_ratio 0.2)
 			(chamfer bottom_left)
-      (net 0 ""))
+      (net 21 "P27"))
     
 		(fp_poly
 			(pts
@@ -561,7 +561,7 @@
 			(roundrect_rratio 0)
 			(chamfer_ratio 0.2)
 			(chamfer bottom_left)
-      (net 0 ""))
+      (net 14 "P10"))
     
 		(fp_poly
 			(pts
@@ -604,7 +604,7 @@
 			(roundrect_rratio 0)
 			(chamfer_ratio 0.2)
 			(chamfer bottom_left)
-      (net 0 ""))
+      (net 17 "P13"))
     
 		(fp_poly
 			(pts
@@ -647,7 +647,7 @@
 			(roundrect_rratio 0)
 			(chamfer_ratio 0.2)
 			(chamfer bottom_left)
-      (net 6 "P2"))
+      (net 20 "P26"))
     
 		(fp_poly
 			(pts
@@ -690,7 +690,7 @@
 			(roundrect_rratio 0)
 			(chamfer_ratio 0.2)
 			(chamfer bottom_left)
-      (net 0 ""))
+      (net 10 "P6"))
     
 		(fp_poly
 			(pts
@@ -733,7 +733,7 @@
 			(roundrect_rratio 0)
 			(chamfer_ratio 0.2)
 			(chamfer bottom_left)
-      (net 0 ""))
+      (net 11 "P7"))
     
 		(fp_poly
 			(pts
@@ -805,7 +805,7 @@
     
 
     
-    (pad "2" smd rect (at 8.275 -3.75 -15) (size 2.6 2.6) (layers "B.Cu" "B.Paste" "B.Mask") (net 0 ""))
+    (pad "2" smd rect (at 8.275 -3.75 -15) (size 2.6 2.6) (layers "B.Cu" "B.Paste" "B.Mask") (net 7 "P3"))
 
     
     (pad "" np_thru_hole circle (at 5 -3.75 180) (size 3 3) (drill 3) (layers "*.Cu" "*.Mask"))
@@ -867,7 +867,7 @@
     
 
     
-    (pad "2" smd rect (at 8.275 -3.75 -20) (size 2.6 2.6) (layers "B.Cu" "B.Paste" "B.Mask") (net 0 ""))
+    (pad "2" smd rect (at 8.275 -3.75 -20) (size 2.6 2.6) (layers "B.Cu" "B.Paste" "B.Mask") (net 8 "P4"))
 
     
     (pad "" np_thru_hole circle (at 5 -3.75 175) (size 3 3) (drill 3) (layers "*.Cu" "*.Mask"))
@@ -929,7 +929,7 @@
     
 
     
-    (pad "2" smd rect (at 8.275 -3.75 -25) (size 2.6 2.6) (layers "B.Cu" "B.Paste" "B.Mask") (net 0 ""))
+    (pad "2" smd rect (at 8.275 -3.75 -25) (size 2.6 2.6) (layers "B.Cu" "B.Paste" "B.Mask") (net 9 "P5"))
 
     
     (pad "" np_thru_hole circle (at 5 -3.75 170) (size 3 3) (drill 3) (layers "*.Cu" "*.Mask"))
@@ -1532,7 +1532,7 @@
 
   (footprint "ceoloide:led_SK6812mini-e (per-keysingle-side)" 
     (layer "B.Cu")
-    (at 100 154.7 0)
+    (at 100 150 0)
     (property "Reference" "LED9"
       (at -4.75 0 90)
       (layer "B.SilkS")
@@ -1606,7 +1606,7 @@
 
   (footprint "ceoloide:led_SK6812mini-e (per-keysingle-side)" 
     (layer "B.Cu")
-    (at 100 116.7 0)
+    (at 100 112 0)
     (property "Reference" "LED10"
       (at -4.75 0 90)
       (layer "B.SilkS")
@@ -1680,7 +1680,7 @@
 
   (footprint "ceoloide:led_SK6812mini-e (per-keysingle-side)" 
     (layer "B.Cu")
-    (at 119 154.7 0)
+    (at 119 150 0)
     (property "Reference" "LED11"
       (at -4.75 0 90)
       (layer "B.SilkS")
@@ -1754,7 +1754,7 @@
 
   (footprint "ceoloide:led_SK6812mini-e (per-keysingle-side)" 
     (layer "B.Cu")
-    (at 119 116.7 0)
+    (at 119 112 0)
     (property "Reference" "LED12"
       (at -4.75 0 90)
       (layer "B.SilkS")
@@ -1828,7 +1828,7 @@
 
   (footprint "ceoloide:led_SK6812mini-e (per-keysingle-side)" 
     (layer "B.Cu")
-    (at 138 116.7 0)
+    (at 138 112 0)
     (property "Reference" "LED13"
       (at -4.75 0 90)
       (layer "B.SilkS")
@@ -1902,7 +1902,7 @@
 
   (footprint "ceoloide:led_SK6812mini-e (per-keysingle-side)" 
     (layer "B.Cu")
-    (at 138.7835505 157.2898514 -15)
+    (at 140 152.75 -15)
     (property "Reference" "LED14"
       (at -4.75 0 75)
       (layer "B.SilkS")
@@ -1976,7 +1976,7 @@
 
   (footprint "ceoloide:led_SK6812mini-e (per-keysingle-side)" 
     (layer "B.Cu")
-    (at 156.96923990000002 163.1794525 -20)
+    (at 158.5767346 158.7628972 -20)
     (property "Reference" "LED15"
       (at -4.75 0 70)
       (layer "B.SilkS")
@@ -2050,7 +2050,7 @@
 
   (footprint "ceoloide:led_SK6812mini-e (per-keysingle-side)" 
     (layer "B.Cu")
-    (at 174.57241470000002 170.6316292 -25)
+    (at 176.55872050000002 166.3719826 -25)
     (property "Reference" "LED16"
       (at -4.75 0 65)
       (layer "B.SilkS")
@@ -2119,6 +2119,78 @@
     )
     
     (fp_rect (start -1.8 -1.55) (end 1.8 1.55) (layer "Edge.Cuts") (stroke (width 0.12) (type solid)) (fill none))
+  )
+    
+
+  (footprint "ceoloide:mounting_hole_plated"
+    (layer "F.Cu")
+    (at 100 102.5 0)
+    (property "Reference" "H1"
+      (at 0 3 0)
+      (layer "F.SilkS")
+      hide
+      (effects (font (size 1 1) (thickness 0.15)))
+    )
+    
+    (pad "" thru_hole circle (at 0 0 0) (size 3.8000000000000003 3.8000000000000003) (drill 2.2) (layers "*.Cu" "*.Mask"))
+    
+    (fp_circle (center 0 0) (end -2.1500000000000004 0) (layer "F.CrtYd") (stroke (width 0.05) (type solid)) (fill none))
+    (fp_circle (center 0 0) (end -2.1500000000000004 0) (layer "B.CrtYd") (stroke (width 0.05) (type solid)) (fill none))
+    
+  )
+    
+
+  (footprint "ceoloide:mounting_hole_plated"
+    (layer "F.Cu")
+    (at 138 102.5 0)
+    (property "Reference" "H2"
+      (at 0 3 0)
+      (layer "F.SilkS")
+      hide
+      (effects (font (size 1 1) (thickness 0.15)))
+    )
+    
+    (pad "" thru_hole circle (at 0 0 0) (size 3.8000000000000003 3.8000000000000003) (drill 2.2) (layers "*.Cu" "*.Mask"))
+    
+    (fp_circle (center 0 0) (end -2.1500000000000004 0) (layer "F.CrtYd") (stroke (width 0.05) (type solid)) (fill none))
+    (fp_circle (center 0 0) (end -2.1500000000000004 0) (layer "B.CrtYd") (stroke (width 0.05) (type solid)) (fill none))
+    
+  )
+    
+
+  (footprint "ceoloide:mounting_hole_plated"
+    (layer "F.Cu")
+    (at 100 140.5 0)
+    (property "Reference" "H3"
+      (at 0 3 0)
+      (layer "F.SilkS")
+      hide
+      (effects (font (size 1 1) (thickness 0.15)))
+    )
+    
+    (pad "" thru_hole circle (at 0 0 0) (size 3.8000000000000003 3.8000000000000003) (drill 2.2) (layers "*.Cu" "*.Mask"))
+    
+    (fp_circle (center 0 0) (end -2.1500000000000004 0) (layer "F.CrtYd") (stroke (width 0.05) (type solid)) (fill none))
+    (fp_circle (center 0 0) (end -2.1500000000000004 0) (layer "B.CrtYd") (stroke (width 0.05) (type solid)) (fill none))
+    
+  )
+    
+
+  (footprint "ceoloide:mounting_hole_plated"
+    (layer "F.Cu")
+    (at 171.44 153.42000000000002 0)
+    (property "Reference" "H4"
+      (at 0 3 0)
+      (layer "F.SilkS")
+      hide
+      (effects (font (size 1 1) (thickness 0.15)))
+    )
+    
+    (pad "" thru_hole circle (at 0 0 0) (size 3.8000000000000003 3.8000000000000003) (drill 2.2) (layers "*.Cu" "*.Mask"))
+    
+    (fp_circle (center 0 0) (end -2.1500000000000004 0) (layer "F.CrtYd") (stroke (width 0.05) (type solid)) (fill none))
+    (fp_circle (center 0 0) (end -2.1500000000000004 0) (layer "B.CrtYd") (stroke (width 0.05) (type solid)) (fill none))
+    
   )
     
   (gr_line (start 88.5 159.88473723721162) (end 88.5 83.5) (layer Edge.Cuts) (stroke (width 0.15) (type default)))

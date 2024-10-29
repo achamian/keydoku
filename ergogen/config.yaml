@@ -23,41 +23,51 @@ points:
             top:
               led_prev: LED_3
               led_next: LED_4
+              net: P28
             home:
               led_prev: LED_4
               led_next: LED_5
+              net: P15
             bottom:
               led_prev: LED_9
               led_next: LED_10
+              net: P12
             func:
               led_prev: LED_10
               led_next: LED_11
+              net: P9
         col2:
           rows:
             top:
               led_prev: LED_2
               led_next: LED_3
+              net: P27
             home:
               led_prev: LED_5
               led_next: LED_6
+              net: P14
             bottom:
               led_prev: LED_8
               led_next: LED_9
+              net: P11
             func:
               led_prev: LED_11
               led_next: LED_12
+              net: P8
         col3:
           rows:
             top:
               led_prev: LED_1
               led_next: LED_2
-              net: P2
+              net: P26
             home:
               led_prev: LED_6
               led_next: LED_7
+              net: P13
             bottom:
               led_prev: LED_7
               led_next: LED_8
+              net: P10
             func.skip: true
       rows:
         func:
@@ -77,6 +87,7 @@ points:
               tags: [choc]
               led_prev: LED_12
               led_next: LED_13
+              net: P3
         mid:
           key:
             splay: -5
@@ -87,10 +98,12 @@ points:
               tags: [mx]
               led_prev: LED_16
               led_next: LED_17
+              net: P6
             thumb_b:
               tags: [choc]
               led_prev: LED_13
               led_next: LED_14
+              net: P4
         far:
           key:
             splay: -5
@@ -101,18 +114,38 @@ points:
               tags: [mx]
               led_prev: LED_15
               led_next: LED_16
+              net: P7
             thumb_b:
               tags: [choc]
               led_prev: LED_14
               led_next: LED_15
+              net: P5
       rows:
         thumb_b:
           key.tags: [mx]
         thump_t:
+    # mount points
+    mounting_points:
+      anchor:
+        ref: matrix_col1_top
+      key:
+        width: 2
+        height: 2
+        tags: [mount]
+      columns:
+        hole_1:
+          key.shift: [0, -0.5ky]
+        hole_2:
+          key.shift: [1kx, -0.5ky]
+        hole_3:
+          key.shift: [-2kx, -2.5ky]
+        hole_4:
+          key.shift: [0.76kx, -3.18ky]
+
 outlines:
   keys:
     - what: rectangle
-      where: true
+      where: /(mx|choc)/
       size: [kx-0.5,ky-0.5]
       bound: false
   plate:
@@ -202,10 +235,6 @@ pcbs:
           P3: GND
           P4: "{{led_prev}}" # DIN
         adjust:
-          shift: [led_pos_x, led_pos_y]
-
-      # led:
-      #   what: ceoloide/led_sk6812mini-e
-      #   where: true
-      #   params:
-      #     side: F
+      mounting_holes:
+        what: ceoloide/mounting_hole_plated
+        where: /mount/
