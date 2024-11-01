@@ -1532,7 +1532,7 @@
 
   (footprint "ceoloide:led_SK6812mini-e (per-keysingle-side)" 
     (layer "B.Cu")
-    (at 100 150 0)
+    (at 100 154.7 0)
     (property "Reference" "LED9"
       (at -4.75 0 90)
       (layer "B.SilkS")
@@ -1606,7 +1606,7 @@
 
   (footprint "ceoloide:led_SK6812mini-e (per-keysingle-side)" 
     (layer "B.Cu")
-    (at 100 112 0)
+    (at 100 116.7 0)
     (property "Reference" "LED10"
       (at -4.75 0 90)
       (layer "B.SilkS")
@@ -1680,7 +1680,7 @@
 
   (footprint "ceoloide:led_SK6812mini-e (per-keysingle-side)" 
     (layer "B.Cu")
-    (at 119 150 0)
+    (at 119 154.7 0)
     (property "Reference" "LED11"
       (at -4.75 0 90)
       (layer "B.SilkS")
@@ -1754,7 +1754,7 @@
 
   (footprint "ceoloide:led_SK6812mini-e (per-keysingle-side)" 
     (layer "B.Cu")
-    (at 119 112 0)
+    (at 119 116.7 0)
     (property "Reference" "LED12"
       (at -4.75 0 90)
       (layer "B.SilkS")
@@ -1828,7 +1828,7 @@
 
   (footprint "ceoloide:led_SK6812mini-e (per-keysingle-side)" 
     (layer "B.Cu")
-    (at 138 112 0)
+    (at 138 116.7 0)
     (property "Reference" "LED13"
       (at -4.75 0 90)
       (layer "B.SilkS")
@@ -1902,7 +1902,7 @@
 
   (footprint "ceoloide:led_SK6812mini-e (per-keysingle-side)" 
     (layer "B.Cu")
-    (at 140 152.75 -15)
+    (at 138.7835505 157.2898514 -15)
     (property "Reference" "LED14"
       (at -4.75 0 75)
       (layer "B.SilkS")
@@ -1976,7 +1976,7 @@
 
   (footprint "ceoloide:led_SK6812mini-e (per-keysingle-side)" 
     (layer "B.Cu")
-    (at 158.5767346 158.7628972 -20)
+    (at 156.96923990000002 163.1794525 -20)
     (property "Reference" "LED15"
       (at -4.75 0 70)
       (layer "B.SilkS")
@@ -2050,7 +2050,7 @@
 
   (footprint "ceoloide:led_SK6812mini-e (per-keysingle-side)" 
     (layer "B.Cu")
-    (at 176.55872050000002 166.3719826 -25)
+    (at 174.57241470000002 170.6316292 -25)
     (property "Reference" "LED16"
       (at -4.75 0 65)
       (layer "B.SilkS")
@@ -2122,77 +2122,77 @@
   )
     
 
-  (footprint "ceoloide:mounting_hole_plated"
+  (footprint "ceoloide:mounting_hole_npth"
     (layer "F.Cu")
     (at 100 102.5 0)
-    (property "Reference" "H1"
-      (at 0 3 0)
+    (property "Reference" "MH1"
+      (at 0 2.55 0)
       (layer "F.SilkS")
       hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
-    
-    (pad "" thru_hole circle (at 0 0 0) (size 3.8000000000000003 3.8000000000000003) (drill 2.2) (layers "*.Cu" "*.Mask"))
-    
-    (fp_circle (center 0 0) (end -2.1500000000000004 0) (layer "F.CrtYd") (stroke (width 0.05) (type solid)) (fill none))
-    (fp_circle (center 0 0) (end -2.1500000000000004 0) (layer "B.CrtYd") (stroke (width 0.05) (type solid)) (fill none))
-    
+    (pad "" np_thru_hole circle
+      (at 0 0 0)
+      (size 2.2 2.2)
+      (drill 2.2)
+      (layers "*.Cu" "*.Mask")
+    )
   )
-    
+  
 
-  (footprint "ceoloide:mounting_hole_plated"
+  (footprint "ceoloide:mounting_hole_npth"
     (layer "F.Cu")
     (at 138 102.5 0)
-    (property "Reference" "H2"
-      (at 0 3 0)
+    (property "Reference" "MH2"
+      (at 0 2.55 0)
       (layer "F.SilkS")
       hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
-    
-    (pad "" thru_hole circle (at 0 0 0) (size 3.8000000000000003 3.8000000000000003) (drill 2.2) (layers "*.Cu" "*.Mask"))
-    
-    (fp_circle (center 0 0) (end -2.1500000000000004 0) (layer "F.CrtYd") (stroke (width 0.05) (type solid)) (fill none))
-    (fp_circle (center 0 0) (end -2.1500000000000004 0) (layer "B.CrtYd") (stroke (width 0.05) (type solid)) (fill none))
-    
+    (pad "" np_thru_hole circle
+      (at 0 0 0)
+      (size 2.2 2.2)
+      (drill 2.2)
+      (layers "*.Cu" "*.Mask")
+    )
   )
-    
+  
 
-  (footprint "ceoloide:mounting_hole_plated"
+  (footprint "ceoloide:mounting_hole_npth"
     (layer "F.Cu")
     (at 100 140.5 0)
-    (property "Reference" "H3"
-      (at 0 3 0)
+    (property "Reference" "MH3"
+      (at 0 2.55 0)
       (layer "F.SilkS")
       hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
-    
-    (pad "" thru_hole circle (at 0 0 0) (size 3.8000000000000003 3.8000000000000003) (drill 2.2) (layers "*.Cu" "*.Mask"))
-    
-    (fp_circle (center 0 0) (end -2.1500000000000004 0) (layer "F.CrtYd") (stroke (width 0.05) (type solid)) (fill none))
-    (fp_circle (center 0 0) (end -2.1500000000000004 0) (layer "B.CrtYd") (stroke (width 0.05) (type solid)) (fill none))
-    
+    (pad "" np_thru_hole circle
+      (at 0 0 0)
+      (size 2.2 2.2)
+      (drill 2.2)
+      (layers "*.Cu" "*.Mask")
+    )
   )
-    
+  
 
-  (footprint "ceoloide:mounting_hole_plated"
+  (footprint "ceoloide:mounting_hole_npth"
     (layer "F.Cu")
     (at 174.575 145.25 0)
-    (property "Reference" "H4"
-      (at 0 3 0)
+    (property "Reference" "MH4"
+      (at 0 2.55 0)
       (layer "F.SilkS")
       hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
-    
-    (pad "" thru_hole circle (at 0 0 0) (size 3.8000000000000003 3.8000000000000003) (drill 2.2) (layers "*.Cu" "*.Mask"))
-    
-    (fp_circle (center 0 0) (end -2.1500000000000004 0) (layer "F.CrtYd") (stroke (width 0.05) (type solid)) (fill none))
-    (fp_circle (center 0 0) (end -2.1500000000000004 0) (layer "B.CrtYd") (stroke (width 0.05) (type solid)) (fill none))
-    
+    (pad "" np_thru_hole circle
+      (at 0 0 0)
+      (size 2.2 2.2)
+      (drill 2.2)
+      (layers "*.Cu" "*.Mask")
+    )
   )
-    
+  
   (gr_line (start 88.5 159.88473723721162) (end 88.5 83.5) (layer Edge.Cuts) (stroke (width 0.15) (type default)))
 (gr_line (start 90.5 81.5) (end 167.5 81.5) (layer Edge.Cuts) (stroke (width 0.15) (type default)))
 (gr_line (start 169.5 83.5) (end 169.5 103.8143546204031) (layer Edge.Cuts) (stroke (width 0.15) (type default)))
@@ -2206,70 +2206,6 @@
 (gr_arc (start 88.5 159.88473723721162) (mid 88.9440713 161.14135413721164) (end 90.079086 161.83994343721162) (layer Edge.Cuts) (stroke (width 0.15) (type default)))
 (gr_arc (start 180.70938139999998 181.3449617) (mid 136.9210373 166.5663405) (end 90.9298891 162.0231032) (layer Edge.Cuts) (stroke (width 0.15) (type default)))
 (gr_arc (start 169.5002877 103.8482805) (mid 177.7132584 128.2817434) (end 199.1266073 142.6314992) (layer Edge.Cuts) (stroke (width 0.15) (type default)))
-(gr_line (start 90.75 159.25) (end 109.25 159.25) (layer Eco1.User) (stroke (width 0.15) (type default)))
-(gr_line (start 109.25 159.25) (end 109.25 140.75) (layer Eco1.User) (stroke (width 0.15) (type default)))
-(gr_line (start 109.25 140.75) (end 90.75 140.75) (layer Eco1.User) (stroke (width 0.15) (type default)))
-(gr_line (start 90.75 140.75) (end 90.75 159.25) (layer Eco1.User) (stroke (width 0.15) (type default)))
-(gr_line (start 90.75 140.25) (end 109.25 140.25) (layer Eco1.User) (stroke (width 0.15) (type default)))
-(gr_line (start 109.25 140.25) (end 109.25 121.75) (layer Eco1.User) (stroke (width 0.15) (type default)))
-(gr_line (start 109.25 121.75) (end 90.75 121.75) (layer Eco1.User) (stroke (width 0.15) (type default)))
-(gr_line (start 90.75 121.75) (end 90.75 140.25) (layer Eco1.User) (stroke (width 0.15) (type default)))
-(gr_line (start 90.75 121.25) (end 109.25 121.25) (layer Eco1.User) (stroke (width 0.15) (type default)))
-(gr_line (start 109.25 121.25) (end 109.25 102.75) (layer Eco1.User) (stroke (width 0.15) (type default)))
-(gr_line (start 109.25 102.75) (end 90.75 102.75) (layer Eco1.User) (stroke (width 0.15) (type default)))
-(gr_line (start 90.75 102.75) (end 90.75 121.25) (layer Eco1.User) (stroke (width 0.15) (type default)))
-(gr_line (start 90.75 102.25) (end 109.25 102.25) (layer Eco1.User) (stroke (width 0.15) (type default)))
-(gr_line (start 109.25 102.25) (end 109.25 83.75) (layer Eco1.User) (stroke (width 0.15) (type default)))
-(gr_line (start 109.25 83.75) (end 90.75 83.75) (layer Eco1.User) (stroke (width 0.15) (type default)))
-(gr_line (start 90.75 83.75) (end 90.75 102.25) (layer Eco1.User) (stroke (width 0.15) (type default)))
-(gr_line (start 109.75 159.25) (end 128.25 159.25) (layer Eco1.User) (stroke (width 0.15) (type default)))
-(gr_line (start 128.25 159.25) (end 128.25 140.75) (layer Eco1.User) (stroke (width 0.15) (type default)))
-(gr_line (start 128.25 140.75) (end 109.75 140.75) (layer Eco1.User) (stroke (width 0.15) (type default)))
-(gr_line (start 109.75 140.75) (end 109.75 159.25) (layer Eco1.User) (stroke (width 0.15) (type default)))
-(gr_line (start 109.75 140.25) (end 128.25 140.25) (layer Eco1.User) (stroke (width 0.15) (type default)))
-(gr_line (start 128.25 140.25) (end 128.25 121.75) (layer Eco1.User) (stroke (width 0.15) (type default)))
-(gr_line (start 128.25 121.75) (end 109.75 121.75) (layer Eco1.User) (stroke (width 0.15) (type default)))
-(gr_line (start 109.75 121.75) (end 109.75 140.25) (layer Eco1.User) (stroke (width 0.15) (type default)))
-(gr_line (start 109.75 121.25) (end 128.25 121.25) (layer Eco1.User) (stroke (width 0.15) (type default)))
-(gr_line (start 128.25 121.25) (end 128.25 102.75) (layer Eco1.User) (stroke (width 0.15) (type default)))
-(gr_line (start 128.25 102.75) (end 109.75 102.75) (layer Eco1.User) (stroke (width 0.15) (type default)))
-(gr_line (start 109.75 102.75) (end 109.75 121.25) (layer Eco1.User) (stroke (width 0.15) (type default)))
-(gr_line (start 109.75 102.25) (end 128.25 102.25) (layer Eco1.User) (stroke (width 0.15) (type default)))
-(gr_line (start 128.25 102.25) (end 128.25 83.75) (layer Eco1.User) (stroke (width 0.15) (type default)))
-(gr_line (start 128.25 83.75) (end 109.75 83.75) (layer Eco1.User) (stroke (width 0.15) (type default)))
-(gr_line (start 109.75 83.75) (end 109.75 102.25) (layer Eco1.User) (stroke (width 0.15) (type default)))
-(gr_line (start 128.75 140.25) (end 147.25 140.25) (layer Eco1.User) (stroke (width 0.15) (type default)))
-(gr_line (start 147.25 140.25) (end 147.25 121.75) (layer Eco1.User) (stroke (width 0.15) (type default)))
-(gr_line (start 147.25 121.75) (end 128.75 121.75) (layer Eco1.User) (stroke (width 0.15) (type default)))
-(gr_line (start 128.75 121.75) (end 128.75 140.25) (layer Eco1.User) (stroke (width 0.15) (type default)))
-(gr_line (start 128.75 121.25) (end 147.25 121.25) (layer Eco1.User) (stroke (width 0.15) (type default)))
-(gr_line (start 147.25 121.25) (end 147.25 102.75) (layer Eco1.User) (stroke (width 0.15) (type default)))
-(gr_line (start 147.25 102.75) (end 128.75 102.75) (layer Eco1.User) (stroke (width 0.15) (type default)))
-(gr_line (start 128.75 102.75) (end 128.75 121.25) (layer Eco1.User) (stroke (width 0.15) (type default)))
-(gr_line (start 128.75 102.25) (end 147.25 102.25) (layer Eco1.User) (stroke (width 0.15) (type default)))
-(gr_line (start 147.25 102.25) (end 147.25 83.75) (layer Eco1.User) (stroke (width 0.15) (type default)))
-(gr_line (start 147.25 83.75) (end 128.75 83.75) (layer Eco1.User) (stroke (width 0.15) (type default)))
-(gr_line (start 128.75 83.75) (end 128.75 102.25) (layer Eco1.User) (stroke (width 0.15) (type default)))
-(gr_line (start 128.6711099 159.2907377) (end 146.5407377 164.0788901) (layer Eco1.User) (stroke (width 0.15) (type default)))
-(gr_line (start 146.5407377 164.0788901) (end 151.3288901 146.2092623) (layer Eco1.User) (stroke (width 0.15) (type default)))
-(gr_line (start 151.3288901 146.2092623) (end 133.4592623 141.4211099) (layer Eco1.User) (stroke (width 0.15) (type default)))
-(gr_line (start 133.4592623 141.4211099) (end 128.6711099 159.2907377) (layer Eco1.User) (stroke (width 0.15) (type default)))
-(gr_line (start 146.72089150000002 164.2913676) (end 164.105205 170.61874029999998) (layer Eco1.User) (stroke (width 0.15) (type default)))
-(gr_line (start 164.105205 170.61874029999998) (end 170.43257770000002 153.2344268) (layer Eco1.User) (stroke (width 0.15) (type default)))
-(gr_line (start 170.43257770000002 153.2344268) (end 153.0482642 146.90705409999998) (layer Eco1.User) (stroke (width 0.15) (type default)))
-(gr_line (start 153.0482642 146.90705409999998) (end 146.72089150000002 164.2913676) (layer Eco1.User) (stroke (width 0.15) (type default)))
-(gr_line (start 153.21927420000003 146.4372078) (end 170.60358770000002 152.7645805) (layer Eco1.User) (stroke (width 0.15) (type default)))
-(gr_line (start 170.60358770000002 152.7645805) (end 176.9309604 135.380267) (layer Eco1.User) (stroke (width 0.15) (type default)))
-(gr_line (start 176.9309604 135.380267) (end 159.5466469 129.0528943) (layer Eco1.User) (stroke (width 0.15) (type default)))
-(gr_line (start 159.5466469 129.0528943) (end 153.21927420000003 146.4372078) (layer Eco1.User) (stroke (width 0.15) (type default)))
-(gr_line (start 164.26615450000003 170.8461107) (end 181.03284860000002 178.6645486) (layer Eco1.User) (stroke (width 0.15) (type default)))
-(gr_line (start 181.03284860000002 178.6645486) (end 188.85128650000001 161.8978545) (layer Eco1.User) (stroke (width 0.15) (type default)))
-(gr_line (start 188.85128650000001 161.8978545) (end 172.08459240000002 154.0794166) (layer Eco1.User) (stroke (width 0.15) (type default)))
-(gr_line (start 172.08459240000002 154.0794166) (end 164.26615450000003 170.8461107) (layer Eco1.User) (stroke (width 0.15) (type default)))
-(gr_line (start 172.29590150000004 153.6262627) (end 189.06259560000004 161.4447006) (layer Eco1.User) (stroke (width 0.15) (type default)))
-(gr_line (start 189.06259560000004 161.4447006) (end 196.88103350000003 144.6780065) (layer Eco1.User) (stroke (width 0.15) (type default)))
-(gr_line (start 196.88103350000003 144.6780065) (end 180.11433940000003 136.85956860000002) (layer Eco1.User) (stroke (width 0.15) (type default)))
-(gr_line (start 180.11433940000003 136.85956860000002) (end 172.29590150000004 153.6262627) (layer Eco1.User) (stroke (width 0.15) (type default)))
 
 )
 

@@ -204,9 +204,6 @@ pcbs:
     outlines:
       main:
         outline: plate
-      keycaps:
-        outline: keys
-        layer: Eco1.User
     footprints:
       mcu:
         what: achamian/rp_2040_zero
@@ -255,6 +252,7 @@ pcbs:
           P3: GND
           P4: "{{led_prev}}" # DIN
         adjust:
+          shift: [led_pos_x, led_pos_y]
       mounting_holes:
-        what: ceoloide/mounting_hole_plated
+        what: ceoloide/mounting_hole_npth
         where: /mount/
