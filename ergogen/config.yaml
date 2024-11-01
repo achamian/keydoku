@@ -23,7 +23,7 @@ points:
             top:
               led_prev: LED_3
               led_next: LED_4
-              net: P28
+              net: P26
             home:
               led_prev: LED_4
               led_next: LED_5
@@ -59,7 +59,7 @@ points:
             top:
               led_prev: LED_1
               led_next: LED_2
-              net: P26
+              net: P28
             home:
               led_prev: LED_6
               led_next: LED_7
@@ -98,7 +98,7 @@ points:
               tags: [mx]
               led_prev: LED_16
               led_next: LED_17
-              net: P6
+              net: P7
             thumb_b:
               tags: [choc]
               led_prev: LED_13
@@ -114,7 +114,7 @@ points:
               tags: [mx]
               led_prev: LED_15
               led_next: LED_16
-              net: P7
+              net: P6
             thumb_b:
               tags: [choc]
               led_prev: LED_14
@@ -140,7 +140,7 @@ points:
         hole_3:
           key.shift: [-2kx, -2.5ky]
         hole_4:
-          key.shift: [0.76kx, -3.18ky]
+          key.shift: [0.925kx, -2.75ky]
 
 outlines:
   keys:
@@ -177,7 +177,27 @@ outlines:
         shift: [71.5, 0.5py - mcu_y + 0.5]
       radius: 40
       operation: subtract
-  quick_view: [plate, -keys]
+  choc_cluster:
+    - what: polygon
+      operation: stack
+      points:
+        - ref: thumbfan_near_thumb_b
+          shift: [-0.5px, 0.5py]
+        - ref: thumbfan_near_thumb_b
+          shift: [0.5px, 0.5py]
+        - ref: thumbfan_mid_thumb_b
+          shift: [0.5px, 0.5py]
+        - ref: thumbfan_far_thumb_b
+          shift: [px, 0.5py]
+        - ref: thumbfan_far_thumb_b
+          shift: [0.5px, -py]
+        - ref: thumbfan_near_thumb_b
+          shift: [-0.5px, -py]
+      fillet: fillet
+    - what: outline
+      name: plate
+      operation: intersect
+  quick_view: [plate, -keys, -choc_cluster]
 pcbs:
   keydoku:
     template: kicad8

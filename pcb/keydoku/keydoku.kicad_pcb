@@ -11,7 +11,7 @@
   (paper "A3")
   (title_block
     (title "keydoku")
-    (date "2024-10-29")
+    (date "2024-11-01")
     (rev "v1.0.0")
     (company "Unknown")
   )
@@ -138,31 +138,31 @@
           (stroke (width 0.12) (type solid)) (fill none) (layer Dwgs.User))
 
         
-        (fp_text user P0 (at 11 -10.16)    (layer F.SilkS) (effects (font (size 0.8 0.8) (thickness 0.15))))
-        (fp_text user P1 (at 11 -7.62)     (layer F.SilkS) (effects (font (size 0.8 0.8) (thickness 0.15))))
-        (fp_text user P2 (at 11 -5.08)     (layer F.SilkS) (effects (font (size 0.8 0.8) (thickness 0.15))))
-        (fp_text user P3 (at 11 -2.54)     (layer F.SilkS) (effects (font (size 0.8 0.8) (thickness 0.15))))
-        (fp_text user P4 (at 11 0)         (layer F.SilkS) (effects (font (size 0.8 0.8) (thickness 0.15))))
-        (fp_text user P5 (at 11 2.54)      (layer F.SilkS) (effects (font (size 0.8 0.8) (thickness 0.15))))
-        (fp_text user P6 (at 11 5.08)      (layer F.SilkS) (effects (font (size 0.8 0.8) (thickness 0.15))))
-        (fp_text user P7 (at 11 7.62)      (layer F.SilkS) (effects (font (size 0.8 0.8) (thickness 0.15))))
-        (fp_text user P8 (at 11 10.16)     (layer F.SilkS) (effects (font (size 0.8 0.8) (thickness 0.15))))
+        (fp_text user P0 (at 5 -10.16)    (layer F.SilkS) (effects (font (size 0.8 0.8) (thickness 0.15))))
+        (fp_text user P1 (at 5 -7.62)     (layer F.SilkS) (effects (font (size 0.8 0.8) (thickness 0.15))))
+        (fp_text user P2 (at 5 -5.08)     (layer F.SilkS) (effects (font (size 0.8 0.8) (thickness 0.15))))
+        (fp_text user P3 (at 5 -2.54)     (layer F.SilkS) (effects (font (size 0.8 0.8) (thickness 0.15))))
+        (fp_text user P4 (at 5 0)         (layer F.SilkS) (effects (font (size 0.8 0.8) (thickness 0.15))))
+        (fp_text user P5 (at 5 2.54)      (layer F.SilkS) (effects (font (size 0.8 0.8) (thickness 0.15))))
+        (fp_text user P6 (at 5 5.08)      (layer F.SilkS) (effects (font (size 0.8 0.8) (thickness 0.15))))
+        (fp_text user P7 (at 5 7.62)      (layer F.SilkS) (effects (font (size 0.8 0.8) (thickness 0.15))))
+        (fp_text user P8 (at 5 10.16)     (layer F.SilkS) (effects (font (size 0.8 0.8) (thickness 0.15))))
 
-        (fp_text user P9  (at 5.08 13.36)  (layer F.SilkS) (effects (font (size 0.8 0.8) (thickness 0.15))))
-        (fp_text user P10 (at 2.54 13.36)  (layer F.SilkS) (effects (font (size 0.8 0.8) (thickness 0.15))))
-        (fp_text user P11 (at 0 13.36)               (layer F.SilkS) (effects (font (size 0.8 0.8) (thickness 0.15))))
-        (fp_text user P12 (at -2.54 13.36)  (layer F.SilkS) (effects (font (size 0.8 0.8) (thickness 0.15))))
-        (fp_text user P13 (at -5.08 13.36)  (layer F.SilkS) (effects (font (size 0.8 0.8) (thickness 0.15))))
+        (fp_text user P9  (at 5.08 8.69)  (layer F.SilkS) (effects (font (size 0.8 0.8) (thickness 0.15))))
+        (fp_text user P10 (at 2.54 8.69)  (layer F.SilkS) (effects (font (size 0.8 0.8) (thickness 0.15))))
+        (fp_text user P11 (at 0 8.69)               (layer F.SilkS) (effects (font (size 0.8 0.8) (thickness 0.15))))
+        (fp_text user P12 (at -2.54 8.69)  (layer F.SilkS) (effects (font (size 0.8 0.8) (thickness 0.15))))
+        (fp_text user P13 (at -5.08 8.69)  (layer F.SilkS) (effects (font (size 0.8 0.8) (thickness 0.15))))
 
-        (fp_text user P14 (at -11 10.16)    (layer F.SilkS) (effects (font (size 0.8 0.8) (thickness 0.15))))
-        (fp_text user P15 (at -11 7.62)     (layer F.SilkS) (effects (font (size 0.8 0.8) (thickness 0.15))))
-        (fp_text user P26 (at -11 5.08)     (layer F.SilkS) (effects (font (size 0.8 0.8) (thickness 0.15))))
-        (fp_text user P27 (at -11 2.54)     (layer F.SilkS) (effects (font (size 0.8 0.8) (thickness 0.15))))
-        (fp_text user P28 (at -11 0)        (layer F.SilkS) (effects (font (size 0.8 0.8) (thickness 0.15))))
-        (fp_text user P29 (at -11 -2.54)    (layer F.SilkS) (effects (font (size 0.8 0.8) (thickness 0.15))))
-        (fp_text user VCC (at -11 -5.08)    (layer F.SilkS) (effects (font (size 0.8 0.8) (thickness 0.15))))
-        (fp_text user GND (at -11 -7.62)    (layer F.SilkS) (effects (font (size 0.8 0.8) (thickness 0.15))))
-        (fp_text user 5V  (at -11 -10.16)   (layer F.SilkS) (effects (font (size 0.8 0.8) (thickness 0.15))))
+        (fp_text user P14 (at -5 10.16)    (layer F.SilkS) (effects (font (size 0.8 0.8) (thickness 0.15))))
+        (fp_text user P15 (at -5 7.62)     (layer F.SilkS) (effects (font (size 0.8 0.8) (thickness 0.15))))
+        (fp_text user P26 (at -5 5.08)     (layer F.SilkS) (effects (font (size 0.8 0.8) (thickness 0.15))))
+        (fp_text user P27 (at -5 2.54)     (layer F.SilkS) (effects (font (size 0.8 0.8) (thickness 0.15))))
+        (fp_text user P28 (at -5 0)        (layer F.SilkS) (effects (font (size 0.8 0.8) (thickness 0.15))))
+        (fp_text user P29 (at -5 -2.54)    (layer F.SilkS) (effects (font (size 0.8 0.8) (thickness 0.15))))
+        (fp_text user VCC (at -5 -5.08)    (layer F.SilkS) (effects (font (size 0.8 0.8) (thickness 0.15))))
+        (fp_text user GND (at -5 -7.62)    (layer F.SilkS) (effects (font (size 0.8 0.8) (thickness 0.15))))
+        (fp_text user 5V  (at -5 -10.16)   (layer F.SilkS) (effects (font (size 0.8 0.8) (thickness 0.15))))
 
         
         (pad 1 thru_hole oval (at 7.62 -10.16 180)        (size 2.5 1.5) (drill 1 (offset -0.5 0)) (layers *.Cu *.Mask) (net 4 "P0"))
@@ -346,7 +346,7 @@
 			(roundrect_rratio 0)
 			(chamfer_ratio 0.2)
 			(chamfer bottom_left)
-      (net 22 "P28"))
+      (net 20 "P26"))
     
 		(fp_poly
 			(pts
@@ -647,7 +647,7 @@
 			(roundrect_rratio 0)
 			(chamfer_ratio 0.2)
 			(chamfer bottom_left)
-      (net 20 "P26"))
+      (net 22 "P28"))
     
 		(fp_poly
 			(pts
@@ -690,7 +690,7 @@
 			(roundrect_rratio 0)
 			(chamfer_ratio 0.2)
 			(chamfer bottom_left)
-      (net 10 "P6"))
+      (net 11 "P7"))
     
 		(fp_poly
 			(pts
@@ -733,7 +733,7 @@
 			(roundrect_rratio 0)
 			(chamfer_ratio 0.2)
 			(chamfer bottom_left)
-      (net 11 "P7"))
+      (net 10 "P6"))
     
 		(fp_poly
 			(pts
@@ -2178,7 +2178,7 @@
 
   (footprint "ceoloide:mounting_hole_plated"
     (layer "F.Cu")
-    (at 171.44 153.42000000000002 0)
+    (at 174.575 145.25 0)
     (property "Reference" "H4"
       (at 0 3 0)
       (layer "F.SilkS")
