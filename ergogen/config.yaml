@@ -82,7 +82,7 @@ points:
         near:
           key.splay: -15
           rows:
-            thump_t.skip: true
+            thumb_t.skip: true
             thumb_b:
               tags: [choc]
               led_prev: LED_12
@@ -94,7 +94,7 @@ points:
             stagger: -1
             spread: kx + 0.5
           rows:
-            thump_t:
+            thumb_t:
               tags: [mx]
               led_prev: LED_16
               led_next: LED_17
@@ -110,7 +110,7 @@ points:
             stagger: -1
             spread: kx + 0.5
           rows:
-            thump_t:
+            thumb_t:
               tags: [mx]
               led_prev: LED_15
               led_next: LED_16
@@ -123,7 +123,7 @@ points:
       rows:
         thumb_b:
           key.tags: [mx]
-        thump_t:
+        thumb_t:
     # mount points
     mounting_points:
       anchor:
@@ -141,7 +141,32 @@ points:
           key.shift: [-2kx, -2.5ky]
         hole_4:
           key.shift: [0.925kx, -2.75ky]
-
+    # bushes
+    t_left_bush:
+      anchor:
+        ref: matrix_col1_top
+        shift: [-0.25kx, 0.25ky]
+      key.tags: [bushes]
+    b_left_bush:
+      anchor:
+        ref: matrix_col1_func
+        shift: [-0.25kx, -0.25ky]
+      key.tags: [bushes]
+    t_right_bush:
+      anchor:
+        ref: matrix_col3_top
+        shift: [0.5kx + 0.75mcu_x, 0.25ky]
+      key.tags: [bushes]
+    m_right_bush:
+      anchor:
+        ref: thumbfan_far_thumb_t
+        shift: [0.25kx, 0.25ky]
+      key.tags: [bushes]
+    b_right_bush:
+      anchor:
+        ref: thumbfan_far_thumb_b
+        shift: [0.25kx, -0.25ky]
+      key.tags: [bushes]
 outlines:
   keys:
     - what: rectangle
@@ -158,7 +183,7 @@ outlines:
           shift: [0.5px + mcu_x + 2, 0.5py]
         - ref: matrix_col3_top
           shift: [0.5px + mcu_x + 2, -0.5py]
-        - ref: thumbfan_far_thump_t
+        - ref: thumbfan_far_thumb_t
           shift: [0.5px, 0.5py]
         - ref: thumbfan_far_thumb_b
           shift: [0.5px, -0.5py]
@@ -182,22 +207,92 @@ outlines:
       operation: stack
       points:
         - ref: thumbfan_near_thumb_b
-          shift: [-0.5px, 0.5py]
+          shift: [-0.5px, 0.5ky]
         - ref: thumbfan_near_thumb_b
-          shift: [0.5px, 0.5py]
+          shift: [0.5kx, 0.5ky]
         - ref: thumbfan_mid_thumb_b
-          shift: [0.5px, 0.5py]
+          shift: [0.5kx, 0.5ky]
         - ref: thumbfan_far_thumb_b
-          shift: [px, 0.5py]
+          shift: [px, 0.5ky]
         - ref: thumbfan_far_thumb_b
-          shift: [0.5px, -py]
+          shift: [px, -py]
         - ref: thumbfan_near_thumb_b
           shift: [-0.5px, -py]
       fillet: fillet
     - what: outline
       name: plate
       operation: intersect
-  quick_view: [plate, -keys, -choc_cluster]
+  top_plate:
+    - what: outline
+      name: plate
+    - what: rectangle
+      where:
+        ref: matrix_col3_top
+        shift: [14 + 0.5px, -23 + 0.5py]
+      operation: subtract
+      size: [30, 46]
+      fillet: fillet
+  mx_switch_holes:
+    - what: rectangle
+      where: /mx/
+      size: 14
+  mx_switch_notch_clearance:
+    - what: rectangle
+      where: /mx/
+      size: 15
+  mx_component_clearance:
+    - what: polygon
+      where: /mx/
+      operation: stack
+      points:
+        - shift: [0, -7]
+        - shift: [-3.5, 0]
+        - shift: [-5.25, 8]
+        - shift: [0, 7]
+        - shift: [17, 0]
+        - shift: [0, -6]
+        - shift: [-5, -9]
+  choc_component_clearance:
+    - what: polygon
+      where: /choc/
+      operation: stack
+      points:
+        - shift: [-7, -7]
+        - shift: [0, 17]
+        - shift: [17, 0]
+        - shift: [0, -17]
+  mcu_clearance:
+    - what: rectangle
+      where:
+        ref: matrix_col3_top
+        shift: [kx + 1.5, -0.5padding]
+      size: [mcu_x + 1, mcu_y + 1]
+  clearances: [mx_component_clearance, choc_component_clearance, mcu_clearance]
+  bushes:
+    - what: circle
+      radius: 2.5
+      where: /bushes/
+  choc_switch_holes:
+    - what: rectangle
+      where: /choc/
+      size: 13.9
+  choc_switch_notch_clearance:
+    - what: rectangle
+      where: /choc/
+      size: 15
+  m2_heat_inserts:
+    - what: circle
+      where: /mounting_points/
+      radius: 1.55
+  m2_hole:
+    - what: circle
+      where: /mounting_points/
+      radius: 1.1
+  m2_nut_head:
+    - what: circle
+      where: /mounting_points/
+      radius: 2.2
+  quick_view: [plate, -bushes]
 pcbs:
   keydoku:
     template: kicad8
@@ -232,7 +327,7 @@ pcbs:
           to: "{{net}}"
       per_key_led_rotated:
         what: ceoloide/led_sk6812mini-e
-        where: /(top|bottom|thump_t)/
+        where: /(top|bottom|thumb_t)/
         params:
           side: B
           P1: VCC5V
