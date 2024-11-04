@@ -240,7 +240,7 @@ outlines:
     - what: rectangle
       where: /mx/
       size: 15
-  mx_component_clearance:
+  _mx_component_clearance:
     - what: polygon
       where: /mx/
       operation: stack
@@ -248,11 +248,11 @@ outlines:
         - shift: [0, -7]
         - shift: [-3.5, 0]
         - shift: [-5.25, 8]
-        - shift: [0, 7]
+        - shift: [0, 6.25]
         - shift: [17, 0]
-        - shift: [0, -6]
+        - shift: [0, -5.25]
         - shift: [-5, -9]
-  choc_component_clearance:
+  _choc_component_clearance:
     - what: polygon
       where: /choc/
       operation: stack
@@ -261,16 +261,16 @@ outlines:
         - shift: [0, 17]
         - shift: [17, 0]
         - shift: [0, -17]
-  mcu_clearance:
+  _mcu_clearance:
     - what: rectangle
       where:
         ref: matrix_col3_top
         shift: [kx + 1.5, -0.5padding]
       size: [mcu_x + 1, mcu_y + 1]
-  clearances: [mx_component_clearance, choc_component_clearance, mcu_clearance]
+  component_clearances: [_mx_component_clearance, _choc_component_clearance, _mcu_clearance]
   bushes:
     - what: circle
-      radius: 2.5
+      radius: 5.1
       where: /bushes/
   choc_switch_holes:
     - what: rectangle
@@ -299,6 +299,9 @@ pcbs:
     outlines:
       main:
         outline: plate
+      clearances:
+        outline: component_clearances
+        layer: Eco1.User
     footprints:
       mcu:
         what: achamian/rp_2040_zero
@@ -351,3 +354,37 @@ pcbs:
       mounting_holes:
         what: ceoloide/mounting_hole_npth
         where: /mount/
+cases:
+  _bottom_clearances:
+    - name: component_clearances
+      extrude: 2
+      shift: [0, 0, 1.5]
+  _bottom_bushes:
+    - name: bushes
+      extrude: 1
+  _bottom_m2_hole:
+    - name: m2_hole
+      extrude: 3.5
+  _bottom_m2_nut_head:
+    - name: m2_nut_head
+      extrude: 2
+  _bottom_plate:
+    - name: plate
+      extrude: 3.5
+  bottom_case:
+    - what: case
+      name: _bottom_plate
+      operation: add
+    - what: case
+      name: _bottom_clearances
+      operation: subtract
+    - what: case
+      name: _bottom_bushes
+      operation: subtract
+    - what: case
+      name: _bottom_m2_hole
+      operation: subtract
+    - what: case
+      name: _bottom_m2_nut_head
+      operation: subtract
+
