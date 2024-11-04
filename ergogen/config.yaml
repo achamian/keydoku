@@ -202,7 +202,18 @@ outlines:
         shift: [71.5, 0.5py - mcu_y + 0.5]
       radius: 40
       operation: subtract
-  choc_cluster:
+  # Outlines for top plate
+  _top_plate:
+    - what: outline
+      name: plate
+    - what: rectangle
+      where:
+        ref: matrix_col3_top
+        shift: [14 + 0.5px, -23 + 0.5py]
+      operation: subtract
+      size: [30, 46]
+      fillet: fillet
+  _choc_cluster:
     - what: polygon
       operation: stack
       points:
@@ -219,27 +230,30 @@ outlines:
         - ref: thumbfan_near_thumb_b
           shift: [-0.5px, -py]
       fillet: fillet
-    - what: outline
-      name: plate
-      operation: intersect
-  top_plate:
-    - what: outline
-      name: plate
-    - what: rectangle
-      where:
-        ref: matrix_col3_top
-        shift: [14 + 0.5px, -23 + 0.5py]
-      operation: subtract
-      size: [30, 46]
-      fillet: fillet
-  mx_switch_holes:
+    # - what: outline
+    #   name: plate
+    #   operation: intersect
+  _mx_switch_holes:
     - what: rectangle
       where: /mx/
       size: 14
-  mx_switch_notch_clearance:
+  _mx_switch_notch_clearance:
     - what: rectangle
       where: /mx/
       size: 15
+  _choc_switch_holes:
+    - what: rectangle
+      where: /choc/
+      size: 13.9
+  _choc_switch_notch_clearance:
+    - what: rectangle
+      where: /choc/
+      size: 15
+  _m2_heat_inserts:
+    - what: circle
+      where: /mounting_points/
+      radius: 1.55
+  # Outlines for bottom plate
   _mx_component_clearance:
     - what: polygon
       where: /mx/
@@ -267,32 +281,20 @@ outlines:
         ref: matrix_col3_top
         shift: [kx + 1.5, -0.5padding]
       size: [mcu_x + 1, mcu_y + 1]
-  component_clearances: [_mx_component_clearance, _choc_component_clearance, _mcu_clearance]
-  bushes:
+  _component_clearances: [_mx_component_clearance, _choc_component_clearance, _mcu_clearance]
+  _bushes:
     - what: circle
       radius: 5.1
       where: /bushes/
-  choc_switch_holes:
-    - what: rectangle
-      where: /choc/
-      size: 13.9
-  choc_switch_notch_clearance:
-    - what: rectangle
-      where: /choc/
-      size: 15
-  m2_heat_inserts:
-    - what: circle
-      where: /mounting_points/
-      radius: 1.55
-  m2_hole:
+  _m2_hole:
     - what: circle
       where: /mounting_points/
       radius: 1.1
-  m2_nut_head:
+  _m2_nut_head:
     - what: circle
       where: /mounting_points/
       radius: 2.2
-  quick_view: [plate, -bushes]
+  quick_view: [plate, -_bushes]
 pcbs:
   keydoku:
     template: kicad8
@@ -300,7 +302,7 @@ pcbs:
       main:
         outline: plate
       clearances:
-        outline: component_clearances
+        outline: _component_clearances
         layer: Eco1.User
     footprints:
       mcu:
@@ -356,17 +358,17 @@ pcbs:
         where: /mount/
 cases:
   _bottom_clearances:
-    - name: component_clearances
+    - name: _component_clearances
       extrude: 2
       shift: [0, 0, 1.5]
   _bottom_bushes:
-    - name: bushes
+    - name: _bushes
       extrude: 1
   _bottom_m2_hole:
-    - name: m2_hole
+    - name: _m2_hole
       extrude: 3.5
   _bottom_m2_nut_head:
-    - name: m2_nut_head
+    - name: _m2_nut_head
       extrude: 2
   _bottom_plate:
     - name: plate
@@ -387,4 +389,47 @@ cases:
     - what: case
       name: _bottom_m2_nut_head
       operation: subtract
-
+  _top_plate:
+    - name: _top_plate
+      extrude: 5.1
+  _mx_switch_holes:
+    - name: _mx_switch_holes
+      extrude: 5.1
+  _mx_switch_notch_clearance:
+    - name: _mx_switch_notch_clearance
+      extrude: 3.7
+  _choc_cluster:
+    - name: _choc_cluster
+      extrude: 5
+      shift: [0, 0, 2.3]
+  _choc_switch_holes:
+    - name: _choc_switch_holes
+      extrude: 2.3
+  _choc_switch_notch_clearance:
+    - name: _choc_switch_notch_clearance
+      extrude: 1
+  _m2_heat_inserts:
+    - name: _m2_heat_inserts
+      extrude: 4
+  top_case:
+    - what: case
+      name: _top_plate
+      operation: add
+    - what: case
+      name: _mx_switch_holes
+      operation: subtract
+    - what: case
+      name: _mx_switch_notch_clearance
+      operation: subtract
+    - what: case
+      name: _choc_cluster
+      operation: subtract
+    - what: case
+      name: _choc_switch_holes
+      operation: subtract
+    - what: case
+      name: _choc_switch_notch_clearance
+      operation: subtract
+    - what: case
+      name: _m2_heat_inserts
+      operation: subtract
