@@ -1,0 +1,11 @@
+{
+    "name": "keydoku",
+    "version": "1.0.0",
+    "description": "A keyboard to solve Sudoku puzzles",
+    "author": "Niranjan Paranjape",
+    "license": "MIT",
+    "dependencies": {
+      "ergogen": "^4.0.8",
+      "@jscad/openjscad": "^1.0.0"
+    }
+  }
