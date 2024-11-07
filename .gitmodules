@@ -1,3 +1,9 @@
 [submodule "ergogen/footprints/ceoloide"]
 	path = ergogen/footprints/ceoloide
 	url = git@github.com:achamian/ergogen-footprints.git
+[submodule "firmware/vial-qmk"]
+	path = firmware/vial-qmk
+	url = https://github.com/vial-kb/vial-qmk.git
+[submodule "firmware/qmk-firmware"]
+	path = firmware/qmk-firmware
+	url = https://github.com/qmk/qmk_firmware.git
