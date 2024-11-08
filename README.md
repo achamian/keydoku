@@ -15,7 +15,7 @@
 # Keymap
 
 <p align="center">
-  <img src="https://github.com/achamian/keydoku/blob/main/assets/layout.png?raw=true" alt="Puzzle Grid" style="max-width: 50%;"/>
+  <img src="https://github.com/achamian/keydoku/blob/main/assets/layout.png?raw=true" alt="Puzzle Grid" width="50%"/>
 </p>
 
 ### Things To Note
