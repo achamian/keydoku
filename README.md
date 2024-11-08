@@ -15,12 +15,12 @@
 # Keymap
 
 <p align="center">
-  <img src="https://github.com/achamian/keydoku/blob/main/assets/layout.png?raw=true" alt="Puzzle Grid" style="max-width: 50%"/>
+  <img src="https://github.com/achamian/keydoku/blob/main/assets/layout.png?raw=true" alt="Puzzle Grid" style="max-width: 50%;"/>
 </p>
 
 ### Things To Note
 
-* Holding down the `Corner`, `Center` or `Colour` keys will switch to respective mode till the key is released.
+* Holding down the `Corner`, `Center` or `Colour` keys will switch to respective mode till the key is released.u
 * Holding down `Digit` key will enable arrow keys, escape and delete.
 
 ### Update default keymap
