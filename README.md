@@ -14,7 +14,6 @@
 
 # Keymap
 
-* Default keymap
-* How to update keymap
-
-# Build
+<p align="center">
+  <img src="https://github.com/achamian/keydoku/blob/main/assets/layout.png?raw=true" alt="Puzzle Grid"/>
+</p>

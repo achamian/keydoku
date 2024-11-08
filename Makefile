@@ -17,8 +17,18 @@ qmk-clean:
 	rm -f firmware/qmk-firmware/keydoku_default.uf2
 	cd firmware/qmk-firmware; qmk clean
 
-qmk-link: qmk-clean
+qmk-init: qmk-clean
 	ln -s $(shell pwd)/firmware/keydoku firmware/qmk-firmware/keyboards/
 
 qmk-compile:
 	cd firmware/qmk-firmware; qmk compile -kb keydoku -km default
+
+vial-clean:
+	rm -rf firmware/vial-qmk/keyboards/keydoku
+	cd firmware/vial-qmk; qmk clean
+
+vial-init: vial-clean
+	ln -s $(shell pwd)/firmware/keydoku firmware/vial-qmk/keyboards/
+
+vial-compile:
+	cd firmware/vial-qmk; qmk compile -kb keydoku -km vial
